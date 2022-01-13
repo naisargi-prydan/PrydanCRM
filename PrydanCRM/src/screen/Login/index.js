@@ -14,11 +14,18 @@ const Login = () => {
     //    onChangeText={(text) =>  onChangeText(text)}
     //    value={value}
     // />
+    <View>
     <TextInput
     style={styles.input}
     onChangeText={onChangeText}
     value={text}
   />
+  <TextInput
+    style={styles.input}
+    onChangeText={onChangeText}
+    value={text}
+    />
+    </View>
 );
 };
 

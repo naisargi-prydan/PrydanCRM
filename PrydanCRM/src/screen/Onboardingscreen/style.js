@@ -24,28 +24,26 @@ export default StyleSheet.create({
   text: {
     color: '#fff',
     fontSize: 30,
-    fontWeight: 'bold',
+    fontWeight: '300',
  },
-  title: {
+ title: {
     fontSize: 22,
-    fontWeight: 'bold',
+    fontWeight: '500',
     marginTop: 30,
     paddingVertical: 10,
-    fontStyle: 'bold',
   },
   description: {
-    fontWeight: 'bold',
+    fontWeight: '300',
     fontSize: 15,
     paddingHorizontal: 30,
     paddingTop: 40,
-    fontStyle: 'Bold',
   },
   subtitle: {
     fontSize: 15,
     paddingTop: 100,
     marginHorizontal: 15,
     paddingVertical: 20,
-    fontWeight: 'bold',
+    fontWeight: '300',
   },
   Img:{
     height: 200,
