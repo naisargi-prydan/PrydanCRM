@@ -27,13 +27,13 @@ export default StyleSheet.create({
     fontWeight: '300',
  },
  title: {
-    fontSize: 22,
+    fontSize:22,
     fontWeight: '500',
     marginTop: 30,
     paddingVertical: 10,
   },
   description: {
-    fontWeight: '300',
+    fontWeight: '400',
     fontSize: 15,
     paddingHorizontal: 30,
     paddingTop: 40,
@@ -43,7 +43,7 @@ export default StyleSheet.create({
     paddingTop: 100,
     marginHorizontal: 15,
     paddingVertical: 20,
-    fontWeight: '300',
+    fontWeight: '400',
   },
   Img:{
     height: 200,
