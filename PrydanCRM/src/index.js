@@ -5,6 +5,8 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 // import OnBoardingScreen from './src/screen/OnBoardingScreen';
 import {Login, Signup, Onboardingscreen} from './screen/index';
 
+
+
 const AppStack = createNativeStackNavigator();
 
 const App = () => {

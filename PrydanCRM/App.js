@@ -1,34 +1,22 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-import OnBoardingScreen from './src/screen/OnBoardingScreen';
-import Login from './src/screen/Login';
-import Signup from './src/screen/Signup';
-
-const AppStack = createNativeStackNavigator();
+/* eslint-disable prettier/prettier */
+import React, {useEffect} from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
+import SplashScreen from 'react-native-splash-screen';
 
 const App = () => {
+  useEffect(() => {
+    setTimeout(() => {
+        SplashScreen.hide({fade: true});
+    }, 3000);
+  }, []);
+
   return (
-    <NavigationContainer>
-      <AppStack.Navigator>
-        <AppStack.Screen
-          name="OnBoarding"
-          component={OnBoardingScreen}
-          options={{headerShown: false}}
-        />
-        <AppStack.Screen
-          name="Login"
-          component={Login}
-          options={{headerShown: false}}
-        />
-        <AppStack.Screen
-          name="Signup"
-          component={Signup}
-          options={{headerShown: false}}
-        />
-      </AppStack.Navigator>
-    </NavigationContainer>
+    <SafeAreaView>
+      <View>
+        <Text>Splash Screen</Text>
+      </View>
+    </SafeAreaView>
   );
 };
+
 export default App;
