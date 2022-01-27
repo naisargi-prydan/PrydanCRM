@@ -49,11 +49,11 @@ export default StyleSheet.create({
     height: 200,
     width: 250,
   },
-  buttons:{
-    flexDirection: 'row',
-    flex:1,
-    marginBottom: 10,
-  },
+  // buttons:{
+  //   flexDirection: 'row',
+  //   flex:1,
+  //   marginBottom: 10,
+  // },
   button1:{
     backgroundColor: '#FF7C03',
     paddingVertical:14,
