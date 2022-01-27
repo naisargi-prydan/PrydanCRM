@@ -56,7 +56,8 @@ export default StyleSheet.create({
   },
   button1:{
     backgroundColor: '#FF7C03',
-    padding: 5,
+    paddingVertical:14,
+    paddingHorizontal: 10,
     borderRadius: 5,
     justifyContent: 'center',
     marginHorizontal: 25,
@@ -68,7 +69,8 @@ export default StyleSheet.create({
   },
   button2:{
     backgroundColor: '#FF7C03',
-    padding: 5,
+    paddingVertical:14,
+    paddingHorizontal: 10,
     borderRadius: 5,
     justifyContent: 'center',
     marginHorizontal: 20,
