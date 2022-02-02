@@ -43,7 +43,7 @@ const Login = (navigation) => {
    <View style={style.description}>
         <Text> Have an account ? </Text>
         <Text style={style.link}
-           onPress={() => navigation.navigate('Signup')}>
+           onPress={() => navigation.navigate('Login')}>
             Sign up
         </Text>
         </View>
