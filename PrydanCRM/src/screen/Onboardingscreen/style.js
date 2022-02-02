@@ -47,9 +47,10 @@ export default StyleSheet.create({
     paddingVertical: 20,
     fontWeight: '400',
   },
-  Img:{
-    height: 200,
-    width: 250,
+  img:{
+    width: 600, 
+    maxWidth:200,
+    maxHeight:120
   },
   buttons:{
     flexDirection: 'row',
