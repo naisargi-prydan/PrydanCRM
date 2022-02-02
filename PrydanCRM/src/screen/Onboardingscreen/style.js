@@ -35,12 +35,14 @@ export default StyleSheet.create({
   description: {
     fontWeight: '400',
     fontSize: 15,
+    textAlign:'center',
     paddingHorizontal: 30,
     paddingTop: 40,
   },
   subtitle: {
     fontSize: 15,
     paddingTop: 100,
+    textAlign:'center',
     marginHorizontal: 15,
     paddingVertical: 20,
     fontWeight: '400',

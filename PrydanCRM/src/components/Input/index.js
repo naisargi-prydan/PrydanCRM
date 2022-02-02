@@ -1,22 +1,38 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Text, View, TextInput, StyleSheet} from 'react-native';
-import style from './style';
+import {View, Text, TextInput, StyleSheet} from 'react-native';
 
-const input = ({onChangeText, styles, value, label, input, text}) => {
+const CustomInput = ({value, setValue, placeholder, secureTextEntry}) => {
   return (
- <View style={styles.container}>
-     <TextInput
-         style={styles.input}
-         onChangeText={onChangeText}
-         value={text}
-       />
-       <TextInput
-         style={styles.input}
-         onChangeText={onChangeText}
-         value={text}
-         />
-  </View>
- );
+    <View style={styles.container}>
+      <TextInput
+        // value={value}
+        OnChangeText={setValue}
+        placeholder={placeholder}
+        style={styles.input}
+        secureTextEntry={secureTextEntry}
+      />
+    </View>
+  );
 };
-export default input;
+
+const styles = StyleSheet.create({
+  container: {
+  // backgroundColor: 'white',
+  },
+  input: {
+    height: 50,
+    width:290,
+    borderWidth: 2,
+    borderRadius:2,
+    borderColor: '#ADADAD',
+    textAlign:'center',
+    fontSize:18,
+    paddingVertical:10,
+    paddingHorizontal: 10,
+    marginTop:10,
+    marginBottom:7,
+  },
+});
+
+export default CustomInput;

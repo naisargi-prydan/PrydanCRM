@@ -5,9 +5,9 @@ export default StyleSheet.create({
     button:{
         borderRadius:1,
         paddingVertical:14,
-        paddingHorizontal: 131,
+        paddingHorizontal: 130,
         // marginHorizontal: 5,
-        marginVertical: 25,
+       // marginVertical: 25,
         backgroundColor: '#D8D8D8',
 
     },

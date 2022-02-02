@@ -3,19 +3,21 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import React from 'react';
+import React,{useState} from 'react';
 import {Text, View, TextInput, StyleSheet,TouchableOpacity, Image} from 'react-native';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Linking } from 'react-native';
+import style from '../../components/Button/style';
 
 
 const Login = (navigation) => {
   const [onChangeText, text] = React.useState('Useless Text');
+  const [username , setUsername] = useState('');  
   return ( 
     <View style={styles.container}>
       <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
-
+    
     <TextInput
     style={styles.input}
     onChangeText={onChangeText}
@@ -29,26 +31,24 @@ const Login = (navigation) => {
     placeholder="Password"
     secureTextEntry={true}
     />
-   <Button/>
+    <View style={styles.loginbtn}>
+      <Button buttonTitle = "Login"/>
+    </View>
+   <Text style={{}}>or</Text>
    <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
-    <Text style={{color: 'blue'}}>
+    <Text style={{color: 'blue',margin:10,}}>
      Forgot Password?
    </Text>
-   </TouchableOpacity>
-   <Text
-              style={styles.registerTextStyle}
-              onPress={() => navigation.navigate('RegisterScreen')}>
-             Don't have an account?SignUp
-            </Text>
-
-   {/* <Text style={styles.text}>or</Text>
-   <Text>Don't have an account?</Text>
-   <TouchableOpacity>
-             <Text onPress={() =>{
-               navigation.navigate('Signup');
-             }}>SignUp</Text>
-           </TouchableOpacity> */}
-    </View>
+   </TouchableOpacity>  
+   <View style={style.description}>
+        <Text> Have an account ? </Text>
+        <Text style={style.link}
+           onPress={() => navigation.navigate('Signup')}>
+            Sign up
+        </Text>
+        </View>
+    
+   </View>
     );
 };
 
@@ -72,27 +72,25 @@ const styles = StyleSheet.create({
     width:300,
     borderWidth: 1,
     borderColor: '#ADADAD',
-    textAlign:'center',      
+    textAlign:'center',  
+    backGroundColor:'#ffffff',    
     fontSize:18,
     paddingVertical:10,
     paddingHorizontal: 10,
     marginTop:20,
-    marginBottom:15,   
+    marginBottom: 10,   
   },
   text:{
     borderColor:'#CBD4E6',
-    
-
+    },  
+  loginbtn:{
+    marginTop:10,
+    marginBottom:20,
   },
-  registerTextStyle: {
-    color: '#ADADAD',
-    textAlign: 'center',
-    fontWeight: 'bold',
-    fontSize: 14,
-    alignSelf: 'center',
-    padding: 10,
+  description:{
+    justifyContent:'center',
+    flexDirection:'row',
   },
-
 
 });
 export default Login;
