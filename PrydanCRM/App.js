@@ -1,20 +1,14 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React, {useEffect} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
+import { useColorScheme } from 'react-native';
 
 const App = () => {
-  useEffect(() => {
-    SplashScreen.hide();
-  }, );
-
-  return (
-    <SafeAreaView>
-      <View>
-        <Text>Splash Screen</Text>
-      </View>
-    </SafeAreaView>
-  );
+  const scheme = useColorScheme();
+  return (<Text style={{ color: scheme === 'dark' ? 'white' : 'black'}}>Hello World</Text>);
 };
+
+
 
 export default App;

@@ -1,4 +1,6 @@
 /* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
 import React, {useEffect}  from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -7,15 +9,13 @@ import {Login, Signup, Onboardingscreen} from './screen/index';
 import SplashScreen from 'react-native-splash-screen';
 
 
-
-
 const AppStack = createNativeStackNavigator();
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   }, );
-  return (
+    return (
     <NavigationContainer>
       <AppStack.Navigator>
         <AppStack.Screen

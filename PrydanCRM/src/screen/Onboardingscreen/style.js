@@ -37,6 +37,7 @@ export default StyleSheet.create({
     fontSize: 15,
     paddingHorizontal: 30,
     paddingTop: 40,
+    textAlign:'center',
   },
   subtitle: {
     fontSize: 15,
@@ -44,6 +45,8 @@ export default StyleSheet.create({
     marginHorizontal: 15,
     paddingVertical: 20,
     fontWeight: '400',
+    justifyContent:'center',
+    textAlign:'center',
   },
   Img:{
     height: 200,

@@ -7,7 +7,7 @@ export default StyleSheet.create({
         paddingVertical:14,
         paddingHorizontal: 131,
         // marginHorizontal: 5,
-        marginVertical: 25,
+       // marginVertical: 25,
         backgroundColor: '#D8D8D8',
 
     },

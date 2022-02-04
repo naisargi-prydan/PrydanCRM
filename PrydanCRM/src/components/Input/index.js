@@ -1,22 +1,19 @@
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {Text, View, TextInput, StyleSheet} from 'react-native';
-import style from './style';
+import { View, TextInput} from 'react-native';
+import styles from './style';
 
-const input = ({onChangeText, styles, value, label, input, text}) => {
+const Input = ({setValue, placeholder, secureTextEntry}) => {
   return (
- <View style={styles.container}>
-     <TextInput
-         style={styles.input}
-         onChangeText={onChangeText}
-         value={text}
-       />
-       <TextInput
-         style={styles.input}
-         onChangeText={onChangeText}
-         value={text}
-         />
-  </View>
+    <View style = {styles.container}>
+    <TextInput
+    OnChangeText={setValue}
+    placeholder={placeholder}
+    style = {styles.input}
+    secureTextEntry={secureTextEntry}
+    />
+   </View>
+
  );
 };
-export default input;
+export default Input;
