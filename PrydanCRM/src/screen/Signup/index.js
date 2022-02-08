@@ -1,18 +1,18 @@
 /* eslint-disable prettier/prettier */
 // /* eslint-disable prettier/prettier */
  import React from 'react';
- import {View, Text, Image, TouchableOpacity} from 'react-native';
+ import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
  import Input from '../../components/Input';
  import Button from '../../components/Button';
 import styles from './style';
 import { Linking } from 'react-native';
-const Signup = (navigation) => {
+
+const Signup = ({navigation}) => {
 
   const [Username, setUserName] = React.useState('');
-   const [Emailaddress, setEmailAddress] = React.useState('');
-
+  const [Emailaddress, setEmailAddress] = React.useState('');
    return (
-
+    <ScrollView>
     <View style={styles.container}>
     <Text style={styles.step}>Step 1 of 4</Text>
        <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
@@ -21,7 +21,7 @@ const Signup = (navigation) => {
          style = {styles.signupInput}
          placeholder="Username"
          setValue={setUserName}
-         secureTextEntry={true}
+         secureTextEntry={false}
        />
         <Input
          style = {styles.signupInput}
@@ -30,7 +30,9 @@ const Signup = (navigation) => {
          secureTextEntry={true}
         />
         <View style = {styles.signUpbtn}>
-        <Button text = "Next"/>
+        <Button title = "Next"
+         onPress={() =>{navigation.navigate('');}}
+        />
         </View>
 
         <View style={styles.description1}>
@@ -41,25 +43,26 @@ const Signup = (navigation) => {
        </Text>
        </TouchableOpacity>
         </View>
-
-        {/* <View style={styles.border}/> */}
+                {/* <View style={styles.border}/> */}
         <View style = {styles.description2}>
         <Text style={styles.text2}>We're committed to your privacy.prydan will use the information you provide to contact you about our relevant content, product and services. You can unsubscribe from these communications at any time. For more information,Check out our </Text>
         <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
-        <Text style={{color: '#215818',fontSize:11,marginHorizontal:30}}>
+        <Text style={{color: '#215818',fontSize:11, marginHorizontal:30}}>
          Privacy Policy.
         </Text>
        </TouchableOpacity>
         </View>
         <View style={styles.text3}>
-         <Text style={{fontSize:16}}>Have an account? </Text>
+         <Text style={{fontSize:16,color:'#000000',}}>Have an account? </Text>
+         <TouchableOpacity onPress={() => navigation.navigate('ConfirmEmail')}>
          <Text
-             style={styles.link}
-              onPress={() => navigation.navigate('Login')}>
+             style={styles.link}>
              Login
          </Text>
+         </TouchableOpacity>
          </View>
        </View>
+       </ScrollView>
     );
  };
 export default Signup;

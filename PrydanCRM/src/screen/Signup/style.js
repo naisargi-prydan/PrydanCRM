@@ -8,6 +8,8 @@ export default StyleSheet.create({
       backgroundColor:'#ffffff',
       },
       step:{
+        marginTop:15,
+        marginLeft:280,
         color:'#808080',
       },
       Img:{
@@ -32,6 +34,7 @@ export default StyleSheet.create({
       text1:{
         textAlign:'center',
         fontSize:11,
+        color:'#000000',
       },
       description2:{
        // marginTop:10,
@@ -46,9 +49,11 @@ export default StyleSheet.create({
         fontSize:11,
         marginHorizontal:30,
         marginTop:10,
+        color:'#000000',
       },
       text3:{
-        marginTop:200,
+        marginTop:150,
+        marginBottom:90,
         flexDirection:'row',
       },
 

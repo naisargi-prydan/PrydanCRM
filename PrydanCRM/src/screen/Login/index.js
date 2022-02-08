@@ -9,12 +9,18 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Linking } from 'react-native';
 import styles from './style';
+import style from '../ConfirmEmail/style';
 
 
-const Login = (navigation) => {
+const Login = ({navigation}) => {
   //const [onChangeText, text] = React.useState('Useless Text');
   const [EmailAddress,setEmailAddress] = React.useState('');
   const [Password,setPassword] = React.useState('');
+   
+  const onLogin = () =>{
+    console.log('Hello');
+  };
+
   return ( 
     <View style={styles.container}>
       <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
@@ -22,16 +28,17 @@ const Login = (navigation) => {
       style = {styles.loginInput}
       placeholder="Email Address"
       setValue={setEmailAddress}
-      secureTextEntry={true}
     />
     <Input
       style = {styles.loginInput}
       placeholder="Password"
+      placeholderTextColor="#000"
       setValue={setPassword}
       secureTextEntry={true}
     />    
-    <View style={styles.loginbtn}>
-      <Button text="Login" />
+    <View >
+      <Button style={styles.loginbtn} title="Login"
+          onPress = {onLogin}  />
     </View>   
 
    <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
@@ -40,13 +47,19 @@ const Login = (navigation) => {
    </Text>
    </TouchableOpacity>
 
-   <View style={styles.text}>
-   <Text>Don't have an account? </Text>
-   <Text
-      style={styles.link}
+   <View style={styles.textview}>
+   <Text style={styles.text}>Don't have an account? </Text>
+   <TouchableOpacity >
+             <Text   
+             style={styles.link} 
+             onPress={() =>{navigation.navigate('ForgotPassword');
+             }}>SignUp</Text>
+           </TouchableOpacity>
+   {/* <Text
+    
       onPress={() => navigation.navigate('RegisterScreen')}>
       SignUp
-    </Text>
+    </Text> */}
     </View>
 
     </View>

@@ -15,14 +15,17 @@ export default StyleSheet.create({
     },
     loginInput:{
       marginTop: 30,
-      marginBottom:10,
+      marginBottom:20,
     },
 
-    text:{
+    textview:{
       //borderColor:'#CBD4E6',
       flexDirection:'row',
       marginTop:30,
       marginBottom:10,
+    },
+    text:{
+      color:'#808080',
     },
     link: {
       color: 'blue',
@@ -32,7 +35,8 @@ export default StyleSheet.create({
       alignSelf: 'center',
     },
     loginbtn:{
-      marginTop:20,
+      paddingHorizontal:15,
+      marginTop:30,
       marginBottom:10,
     },
 });

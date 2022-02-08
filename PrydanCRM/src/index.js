@@ -2,21 +2,27 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React, {useEffect}  from 'react';
+import { useColorScheme } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import { DefaultTheme, DarkTheme} from '@react-navigation/native';
 // import OnBoardingScreen from './src/screen/OnBoardingScreen';
-import {Login, Signup, Onboardingscreen} from './screen/index';
+import {Login, Signup, Onboardingscreen, ConfirmEmail, ForgotPassword} from './screen/index';
+
 import SplashScreen from 'react-native-splash-screen';
 
 
 const AppStack = createNativeStackNavigator();
 
+
+
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   }, );
+  const scheme = useColorScheme();
     return (
-    <NavigationContainer>
+      <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
       <AppStack.Navigator>
         <AppStack.Screen
           name="Onboarding"
@@ -33,8 +39,18 @@ const App = () => {
           component={Signup}
           options={{headerShown: false}}
         />
+        <AppStack.Screen
+          name="ConfirmEmail"
+          component={ConfirmEmail}
+          options={{headerShown: false}}
+        />
+        <AppStack.Screen
+          name="ForgotPassword"
+          component={ForgotPassword}
+          options={{headerShown: false}}
+        />
       </AppStack.Navigator>
-    </NavigationContainer>
+      </NavigationContainer>
   );
 };
 export default App;

@@ -16,6 +16,7 @@ export default StyleSheet.create({
         fontWeight:'normal',
         fontSize:16,
         textAlign:'center',
+
     },
 });
 
