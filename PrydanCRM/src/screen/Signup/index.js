@@ -1,14 +1,19 @@
 /* eslint-disable prettier/prettier */
 // /* eslint-disable prettier/prettier */
  import React from 'react';
- import {View, Text, Image, TouchableOpacity, ScrollView} from 'react-native';
+ import {View, Text, Image, TouchableOpacity, ScrollView, useWindowDimensions} from 'react-native';
  import Input from '../../components/Input';
  import Button from '../../components/Button';
-import styles from './style';
-import { Linking } from 'react-native';
+ import styles from './style';
+ import { Linking } from 'react-native';
+
+
+
 
 const Signup = ({navigation}) => {
 
+
+  const {height} = useWindowDimensions();
   const [Username, setUserName] = React.useState('');
   const [Emailaddress, setEmailAddress] = React.useState('');
    return (
@@ -31,7 +36,9 @@ const Signup = ({navigation}) => {
         />
         <View style = {styles.signUpbtn}>
         <Button title = "Next"
-         onPress={() =>{navigation.navigate('');}}
+         onPress={() => {
+               navigation.navigate('Login');
+             }}
         />
         </View>
 

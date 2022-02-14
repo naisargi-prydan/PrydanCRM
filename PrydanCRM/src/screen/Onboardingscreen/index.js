@@ -2,7 +2,7 @@
 /* eslint-disable react-native/no-inline-styles */
 /* eslint-disable prettier/prettier */
 import React from 'react';
-import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {View, Text, Image, TouchableOpacity,} from 'react-native';
 // import Onboarding from 'react-native-onboarding-swiper';
 import Swiper from 'react-native-swiper';
 // import Spacer from 'react-native-spacer';

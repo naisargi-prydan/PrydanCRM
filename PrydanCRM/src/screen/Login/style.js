@@ -1,5 +1,6 @@
 /* eslint-disable prettier/prettier */
 import {StyleSheet} from 'react-native';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 export default StyleSheet.create({
   wrapper: {},
@@ -31,12 +32,16 @@ export default StyleSheet.create({
       color: 'blue',
       textAlign: 'center',
       fontWeight: 'bold',
-      fontSize: 14,
+       fontSize: hp('1.6%'),
       alignSelf: 'center',
     },
+    loginview:{
+      marginTop:15,
+    },
     loginbtn:{
+      width: wp('5%'),
       paddingHorizontal:15,
-      marginTop:30,
+      marginTop:40,
       marginBottom:10,
     },
 });

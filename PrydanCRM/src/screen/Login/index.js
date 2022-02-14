@@ -3,13 +3,14 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable prettier/prettier */
-import React from 'react';
-import {Text, View, TextInput, TouchableOpacity, Image} from 'react-native';
+import React  from 'react';
+import {Text, View, TextInput, TouchableOpacity, Image, ScrollView, } from 'react-native';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Linking } from 'react-native';
 import styles from './style';
-import style from '../ConfirmEmail/style';
+import { useEffect } from 'react';
+
 
 
 const Login = ({navigation}) => {
@@ -22,6 +23,7 @@ const Login = ({navigation}) => {
   };
 
   return ( 
+    
     <View style={styles.container}>
       <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
     <Input
@@ -36,7 +38,9 @@ const Login = ({navigation}) => {
       setValue={setPassword}
       secureTextEntry={true}
     />    
-    <View >
+    
+          
+    <View style = {styles.loginview}>
       <Button style={styles.loginbtn} title="Login"
           onPress = {onLogin}  />
     </View>   
@@ -63,6 +67,7 @@ const Login = ({navigation}) => {
     </View>
 
     </View>
+    
     );
 };
 

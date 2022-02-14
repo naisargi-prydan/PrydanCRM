@@ -27,6 +27,32 @@ export  default StyleSheet.create({
         fpinput:{
             paddingHorizontal:10,
             marginHorizontal:50,
+        },
+        btnresetpassword:{
+         // paddingVertical:10,
+        //    paddingHorizontal:70,
+           marginTop:10,
+        //    marginBottom:10,
 
-        }
+        },
+        linktext:{
+            margin:15,
+            color:'black',
+            flexDirection:'row',
+        },
+        link:{
+            color:'blue',
+        },
+        text:{
+            fontSize:10,
+            color:'black',
+            marginTop:280,
+            marginBottom:5,
+        },
+        link2:{
+            color:'blue',
+            fontSize:11,
+            fontWeight:'bold',
+        },
+
 });
