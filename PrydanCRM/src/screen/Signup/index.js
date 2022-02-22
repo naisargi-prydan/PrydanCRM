@@ -36,7 +36,9 @@ const Signup = ({navigation}) => {
         />
         <View style = {styles.signUpbtn}>
         <Button title = "Next"
-         onPress = {() => Linking.openURL('http://google.com')}
+         onPress={() => {
+               navigation.navigate('Login');
+             }}
         />
         </View>
 

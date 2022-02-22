@@ -6,19 +6,20 @@ import { useColorScheme } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { DefaultTheme, DarkTheme} from '@react-navigation/native';
-import {Login, Signup, Onboardingscreen, ConfirmEmail, ForgotPassword, AddContact} from './screen/index';
+// import OnBoardingScreen from './src/screen/OnBoardingScreen';
+import {Login, Signup, Onboardingscreen, ConfirmEmail, ForgotPassword} from './screen/index';
 
 import SplashScreen from 'react-native-splash-screen';
-import TabNavigator from './navigation/TabNavigator';
 
 
 const AppStack = createNativeStackNavigator();
+
+
 
 const App = () => {
   useEffect(() => {
     SplashScreen.hide();
   }, );
-
   const scheme = useColorScheme();
     return (
       <NavigationContainer theme={scheme === 'dark' ? DarkTheme : DefaultTheme}>
@@ -48,17 +49,7 @@ const App = () => {
           component={ForgotPassword}
           options={{headerShown: false}}
         />
-        <AppStack.Screen
-          name="AddContact"
-          component={AddContact}
-          options={{headerShown: false}}
-        />
-         <AppStack.Screen
-          name="Contacts"
-          component={TabNavigator}
-          options={{headerShown: false}}
-        />
-       </AppStack.Navigator>
+      </AppStack.Navigator>
       </NavigationContainer>
   );
 };

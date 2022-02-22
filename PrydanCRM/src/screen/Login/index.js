@@ -1,12 +1,10 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react-native/no-inline-styles */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-alert */
-/* eslint-disable no-spaced-func */
 /* eslint-disable prettier/prettier */
-
+/* eslint-disable no-trailing-spaces */
+/* eslint-disable prettier/prettier */
 import React  from 'react';
-import {Text, View, TextInput, TouchableOpacity, Image, ScrollView } from 'react-native';
+import {Text, View, TextInput, TouchableOpacity, Image, ScrollView, } from 'react-native';
 import Input from '../../components/Input';
 import Button from '../../components/Button';
 import { Linking } from 'react-native';
@@ -19,13 +17,13 @@ const Login = ({navigation}) => {
   //const [onChangeText, text] = React.useState('Useless Text');
   const [EmailAddress,setEmailAddress] = React.useState('');
   const [Password,setPassword] = React.useState('');
-
+   
   const onLogin = () =>{
-   alert ('Hello');
+    console.log('Hello');
   };
 
-  return (
-
+  return ( 
+    
     <View style={styles.container}>
       <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
     <Input
@@ -39,18 +37,13 @@ const Login = ({navigation}) => {
       placeholderTextColor="#000"
       setValue={setPassword}
       secureTextEntry={true}
-    />
-
-{/* 
+    />    
+    
+          
     <View style = {styles.loginview}>
       <Button style={styles.loginbtn} title="Login"
-         />
-    </View> */}
-    <TouchableOpacity style={styles.button1}>
-             <Text style={styles.buttonTitle} onPress={() => {
-               navigation.navigate('Contacts');
-             }}>Login</Text>
-           </TouchableOpacity>
+          onPress = {onLogin}  />
+    </View>   
 
    <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
     <Text style={{color: 'blue',marginTop:30}}>
@@ -58,30 +51,23 @@ const Login = ({navigation}) => {
    </Text>
    </TouchableOpacity>
 
-   {/* <TouchableOpacity
-    onPress = {onLogin}>
-    <Text style={{color: 'blue',marginTop:30}}>
-     Forgot Password?
-   </Text>
-   </TouchableOpacity> */}
-
    <View style={styles.textview}>
    <Text style={styles.text}>Don't have an account? </Text>
    <TouchableOpacity >
-             <Text
-             style={styles.link}
+             <Text   
+             style={styles.link} 
              onPress={() =>{navigation.navigate('ForgotPassword');
              }}>SignUp</Text>
            </TouchableOpacity>
    {/* <Text
-
+    
       onPress={() => navigation.navigate('RegisterScreen')}>
       SignUp
     </Text> */}
     </View>
 
     </View>
-
+    
     );
 };
 

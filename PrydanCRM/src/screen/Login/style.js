@@ -44,23 +44,4 @@ export default StyleSheet.create({
       marginTop:40,
       marginBottom:10,
     },
-    button1:{
-      marginTop:10,
-      borderRadius:1,
-      paddingVertical:14,
-      // paddingHorizontal: 10,
-      backgroundColor: '#D8D8D8',
-      height: hp('6%'),
-      width: wp('79%'),
-    },
-    buttonTitle:{
-      // fontWeight: 'bold',
-      // color: '#fff',
-      // fontSize: 15,
-        color:'#333333',
-        fontWeight:'normal',
-        fontSize:16,
-        textAlign:'center',
-        justifyContent:'space-between',
-    },
 });
