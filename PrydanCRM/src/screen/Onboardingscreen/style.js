@@ -8,6 +8,7 @@ export default StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#fff',
+    color:'#000000',
   },
   slide2: {
     flex: 1,
@@ -22,21 +23,25 @@ export default StyleSheet.create({
     backgroundColor: '#fff',
   },
   text: {
-    color: '#fff',
+    color: 'black',
     fontSize: 30,
     fontWeight: '300',
+    //fontFamily:'Roboto Black Italic',
  },
  title: {
     fontSize:22,
     fontWeight: '500',
     marginTop: 30,
     paddingVertical: 10,
+    color:'black',
   },
   description: {
     fontWeight: '400',
     fontSize: 15,
     paddingHorizontal: 30,
     paddingTop: 40,
+    textAlign:'center',
+    color:'black',
   },
   subtitle: {
     fontSize: 15,
@@ -44,6 +49,9 @@ export default StyleSheet.create({
     marginHorizontal: 15,
     paddingVertical: 20,
     fontWeight: '400',
+    justifyContent:'center',
+    textAlign:'center',
+    color:'black',
   },
   Img:{
     height: 200,
