@@ -1,75 +1,57 @@
 /* eslint-disable prettier/prettier */
 // /* eslint-disable prettier/prettier */
  import React from 'react';
- import {View, Text, Image, TouchableOpacity, ScrollView, useWindowDimensions} from 'react-native';
- import Input from '../../components/Input';
- import Button from '../../components/Button';
- import styles from './style';
- import { Linking } from 'react-native';
-
-
-
-
-const Signup = ({navigation}) => {
-
-
-  const {height} = useWindowDimensions();
-  const [Username, setUserName] = React.useState('');
-  const [Emailaddress, setEmailAddress] = React.useState('');
+ import {View, Text, Image, StyleSheet,TextInput} from 'react-native';
+ //import style from '../../components/Input/style';
+ const Signup = () => {
+   const[onChangeText,text] = React.useState('Useless Text');
    return (
-    <ScrollView>
-    <View style={styles.container}>
-    <Text style={styles.step}>Step 1 of 4</Text>
-       <Image  style={styles.Img} source={require('../../assets/Images/logo.png')}/>
-       <Text style={styles.text}>Create your account</Text>
-        <Input
-         style = {styles.signupInput}
-         placeholder="Username"
-         setValue={setUserName}
-         secureTextEntry={false}
-       />
-        <Input
-         style = {styles.signupInput}
-         placeholder="Email address"
-         setValue={setEmailAddress}
-         secureTextEntry={true}
-        />
-        <View style = {styles.signUpbtn}>
-        <Button title = "Next"
-         onPress={() => {
-               navigation.navigate('Login');
-             }}
-        />
-        </View>
-
-        <View style={styles.description1}>
-        <Text style={styles.text1}>By creating CRM account, you're agreeing to accept the </Text>
-        <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
-        <Text style={{color: '#215818',fontSize:11,marginHorizontal:1}}>
-        Prydan terms of services
-       </Text>
-       </TouchableOpacity>
-        </View>
-                {/* <View style={styles.border}/> */}
-        <View style = {styles.description2}>
-        <Text style={styles.text2}>We're committed to your privacy.prydan will use the information you provide to contact you about our relevant content, product and services. You can unsubscribe from these communications at any time. For more information,Check out our </Text>
-        <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>
-        <Text style={{color: '#215818',fontSize:11, marginHorizontal:30}}>
-         Privacy Policy.
-        </Text>
-       </TouchableOpacity>
-        </View>
-        <View style={styles.text3}>
-         <Text style={{fontSize:16,color:'#000000',}}>Have an account? </Text>
-         <TouchableOpacity onPress={() => navigation.navigate('ConfirmEmail')}>
-         <Text
-             style={styles.link}>
-             Login
-         </Text>
-         </TouchableOpacity>
-         </View>
+       <View style={style.container}>
+       <Image  style={style.Img} source={require('../../assets/Images/logo.png')}/>
+       <View style={{flexDirection:'row'}}>
+       <TextInput
+         style={style.input}
+         onChangeText={onChangeText}
+         value={text}
+         placeHolder="First Name"
+         />
+         <TextInput
+           style={style.input}
+           onChangText={onChangeText}
+           value={text}
+           placeHolder="LastName"
+         /></View>
+         <TextInput
+           style={style.input}
+           onChangText={onChangeText}
+           value={text}
+           placeHolder="LastName"
+         />
        </View>
-       </ScrollView>
-    );
+     );
  };
-export default Signup;
+const style = StyleSheet.create({
+  container:{
+    flex:1,
+    alignItems:'center',
+    backGroundColor:'#ffffff',
+  },
+   Img:{
+     marginTop:50,
+     marginBottom:20,
+   },
+   input: {
+    height: 58,
+     width:162,
+     borderWidth: 1,
+     borderColor: '#ADADAD',
+     textAlign:'center',
+     fontSize:18,
+    paddingVertical:10,
+    paddingHorizontal: 10,
+    marginTop:20,
+    marginBottom:15,
+  },
+ })
+
+
