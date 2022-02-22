@@ -1,7 +1,7 @@
-module.exports = {
-  project: {
-    ios: {},
-    android: {},
-  },
-  assets: ['..........assets\fonts'],
-};
+/* eslint-disable prettier/prettier */
+//  export const project = {
+//    ios: {},
+//    android: {},
+//  };
+// export const assets = ['../../assets/fonts'];
+

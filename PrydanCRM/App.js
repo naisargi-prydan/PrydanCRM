@@ -1,34 +1,14 @@
-import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
-import OnBoardingScreen from './src/screen/OnBoardingScreen';
-import Login from './src/screen/Login';
-import Signup from './src/screen/Signup';
-
-const AppStack = createNativeStackNavigator();
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React, {useEffect} from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
+import { useColorScheme } from 'react-native';
 
 const App = () => {
-  return (
-    <NavigationContainer>
-      <AppStack.Navigator>
-        <AppStack.Screen
-          name="OnBoarding"
-          component={OnBoardingScreen}
-          options={{headerShown: false}}
-        />
-        <AppStack.Screen
-          name="Login"
-          component={Login}
-          options={{headerShown: false}}
-        />
-        <AppStack.Screen
-          name="Signup"
-          component={Signup}
-          options={{headerShown: false}}
-        />
-      </AppStack.Navigator>
-    </NavigationContainer>
-  );
+  const scheme = useColorScheme();
+  return (<Text style={{ color: scheme === 'dark' ? 'white' : 'black'}}>Hello World</Text>);
 };
+
+
+
 export default App;
