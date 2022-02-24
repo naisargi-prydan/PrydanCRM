@@ -41,8 +41,13 @@ const Login = ({navigation}) => {
     
           
     <View style = {styles.loginview}>
-      <Button style={styles.loginbtn} title="Login"
-          onPress = {onLogin}  />
+    <TouchableOpacity 
+      style={styles.loginbtn}
+      onPress={() => navigation.navigate('Login')}>
+        <Text style={styles.buttonText}>Login</Text>
+      </TouchableOpacity>
+      {/* <Button style={styles.loginbtn} title="Login"
+          onPress = {onLogin}  /> */}
     </View>   
 
    <TouchableOpacity onPress={() => Linking.openURL('http://google.com')}>

@@ -6,11 +6,10 @@ import { useColorScheme } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import { DefaultTheme, DarkTheme} from '@react-navigation/native';
-// import OnBoardingScreen from './src/screen/OnBoardingScreen';
 import {Login, Signup, Onboardingscreen, ConfirmEmail, ForgotPassword} from './screen/index';
 
 import SplashScreen from 'react-native-splash-screen';
-
+//import TabNavigator from './Navigation/TabNavigator';
 
 const AppStack = createNativeStackNavigator();
 
@@ -49,6 +48,16 @@ const App = () => {
           component={ForgotPassword}
           options={{headerShown: false}}
         />
+        {/* <AppStack.Screen
+          name="Contact"
+          component={TabNavigator}
+          options={{headerShown: false}}
+        /> */}
+        {/* <AppStack.Screen
+        name="Contact"
+        component={TabNavigator}
+        options={{headerShown:false}}
+        /> */}
       </AppStack.Navigator>
       </NavigationContainer>
   );
