@@ -1,0 +1,36 @@
+import {StyleSheet} from 'react-native';
+export default StyleSheet.create ({
+    MainContainer:{
+        backgroundColor:'white',       
+    },
+    heading:{
+        flexDirection:'row',
+    },
+    index:{
+        color:'black',
+        fontSize:20,
+        fontWeight:'bold',
+        marginLeft:20,
+        marginTop:20,
+        marginBottom:10,
+    },
+    inputcontainer:{
+        margiTop:10,
+    },
+    save:{
+        marginLeft:220,
+        marginTop:20,
+        marginBottom:20,
+        color:'darkgreen',
+        fontSize:15,
+        fontWeight:'bold',
+        color:'green',
+    },
+    instructionview:{
+        alignItems:'center',
+        margin:20,
+    },
+    instruction:{
+        fontSize:15,
+    },
+})

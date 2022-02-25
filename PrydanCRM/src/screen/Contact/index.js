@@ -1,12 +1,29 @@
-/* eslint-disable prettier/prettier */
-import { View, Text } from 'react-native';
 import React from 'react';
+import {SafeAreaView, Text, View,TouchableOpacity} from 'react-native';
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import Fontisto from 'react-native-vector-icons/Fontisto';
+import styles from './style';
 
-const Contact = () => {
+const Contact = ({navigation}) => {
   return (
-    <View>
-      <Text style={{fontSize:20, color:'yellow'}}>index</Text>
-    </View>
+    <SafeAreaView style={{flex: 1,backgroundColor:'white'}}>
+      <View>
+        <View style={styles.container}>
+          <Text style={styles.heading}>
+            Contact           
+         </Text>    
+          </View>
+          <View style={styles.iconContainer}>
+          <TouchableOpacity
+            style={styles.addcontactbtn}
+            onPress = {() =>{ navigation.navigate('AddContact');}}>     
+            <Text>
+              <FontAwesome5 name="user-plus" size={20} color="black"/>
+            </Text>
+            </TouchableOpacity>           
+          </View>    
+        </View>    
+    </SafeAreaView>
   );
 };
 
