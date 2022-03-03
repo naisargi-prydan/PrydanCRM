@@ -10,4 +10,6 @@ export {default as Contact} from '../screen/Contact/index';
 export {default as Deals} from '../screen/Deals/index';
 export {default as Activity} from '../screen/Activity/index';
 export {default as More} from '../screen/More/index';
-//export {default as TabNavigator} from '../Navigation/TabNavigator';
+export {default as TabNavigator} from '../Navigation/TabNavigator';
+export {default as AddInput} from '../components/AddInput';
+export {default as AddContact} from '../screen/AddContact';
