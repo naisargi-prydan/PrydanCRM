@@ -60,7 +60,7 @@ const Login = ({navigation}) => {
    <Text style={styles.text}>Don't have an account? </Text>
    <TouchableOpacity >
              <Text   
-             style={styles.link} 
+             style={styles.link}
              onPress={() =>{navigation.navigate('ForgotPassword');
              }}>SignUp</Text>
            </TouchableOpacity>
